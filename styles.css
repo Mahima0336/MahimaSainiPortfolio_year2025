@@ -1,0 +1,646 @@
+:root {
+  --canvas: #f5f1b6;      /*outer big yellow box*/
+  --canvas-inner: #f9f7d1;/*inner smaller box*/
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*outer big yellow box*/
+body {
+  background: var(--canvas);
+  min-height: 100vh;
+  font-family: "Gochi Hand", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrap {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  aspect-ratio: 16 / 10;
+  background: var(--canvas-inner);
+  border-radius: 60px;
+  box-shadow: 0 25px 40px var(--shadow);
+  overflow: hidden;
+}
+
+/* illustrations*/
+.hero-illustration {
+  position: absolute;
+  left: -60px; 
+  bottom: -70px;
+  width: 90%;
+}
+
+/* Title*/
+.title {
+  position: absolute;
+  top: 28%;
+  right: 16%;
+  text-align: left;
+  color: #231a15;
+  white-space: nowrap;
+}
+
+.title-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.title-link:hover {
+  color: #c74444;
+}
+
+.title-link:focus-visible {
+  outline: 3px solid #d35555;
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+
+.title-small {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+}
+
+.title-main {
+  display: block;
+  font-size: 6.4rem;
+  line-height: 0.9;
+}
+/* about me*/
+.about-page, .about-nav a, .about-title, .about-role {
+  font-family: 'Architects Daughter', cursive !important;
+}
+.about-page {
+  background: var(--canvas);
+  padding: 48px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-wrap {
+  width: 100%;
+  max-width: 1180px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.about-title {
+  font-size: clamp(3rem, 4vw + 1rem, 4.6rem);
+  color: #d35555;
+  margin: 0 0 22px;
+  letter-spacing: 1px;
+}
+
+.about-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(28px, 6vw, 80px);
+  font-size: clamp(1.3rem, 1.4vw + 0.9rem, 2rem);
+}
+
+.about-nav a {
+  color: #1f1b1b;
+  text-decoration: none;
+  padding-bottom: 6px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.about-nav a:hover {
+  color: #d35555;
+}
+
+.about-nav a.active {
+  border-bottom: 3px solid #d35555;
+  color: #d35555;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.about-portrait {
+  width: clamp(240px, 38vw, 420px);
+  aspect-ratio: 1;
+  background: #f9f7d1;
+  border-radius: 50%;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-portrait img {
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.about-role {
+  font-size: clamp(1.6rem, 1.6vw + 1.1rem, 2.4rem);
+  color: #1f1b1b;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .about-page {
+    padding: 36px 18px 44px;
+  }
+  .about-nav {
+    gap: 22px;
+  }
+}
+
+/*about me*/
+.aboutme-page {
+  background: var(--canvas);
+  min-height: 100vh;
+  font-family: "Gochi Hand", sans-serif;
+  padding: 48px 28px 70px;
+  display: block;
+}
+
+.aboutme-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutme-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+
+.aboutme-nav {
+  display: flex;
+  gap: clamp(34px, 6vw, 110px);
+  font-size: clamp(1.6rem, 1.2vw + 1.1rem, 2.4rem);
+  align-items: center;
+}
+
+.aboutme-nav a {
+  color: #1f1b1b;
+  text-decoration: none;
+  padding-bottom: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.aboutme-nav a:hover {
+  color: #d35555;
+}
+
+.aboutme-nav a.active {
+  border-bottom: 3px solid #d35555;
+  color: #d35555;
+}
+
+.aboutme-main {
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 6vw, 70px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutme-illustration {
+  background: var(--canvas-inner);
+  border-radius: 48px;
+  padding: 28px 22px;
+  box-shadow: 0 18px 32px var(--shadow);
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutme-illustration img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 36px;
+}
+
+.aboutme-card {
+  background: var(--canvas-inner);
+  border-radius: 46px;
+  padding: clamp(26px, 3vw, 36px) clamp(30px, 4vw, 42px);
+  box-shadow: 0 18px 32px var(--shadow);
+  max-width: 720px;
+  width: 100%;
+  line-height: 1.75;
+}
+
+.aboutme-heading {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(2.4rem, 2vw + 1rem, 3.2rem);
+  margin-bottom: 14px;
+  color: #231a15;
+}
+
+.aboutme-copy {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(1.05rem, 0.9vw + 1rem, 1.35rem);
+  color: #231a15;
+}
+
+@media (max-width: 900px) {
+  .aboutme-page {
+    padding: 40px 22px 60px;
+  }
+  .aboutme-header {
+    margin-bottom: 32px;
+  }
+  .aboutme-main {
+    align-items: flex-start;
+  }
+  .aboutme-card {
+    text-align: left;
+  }
+}
+
+/*homepage */
+.about-page {
+  font-family: "Architects Daughter", cursive;
+}
+
+/*projects*/
+.projects-page {
+  background: var(--canvas);
+  min-height: 100vh;
+  font-family: "Gochi Hand", sans-serif;
+  padding: 60px 60px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-wrap {
+  width: 100%;
+  max-width: 1240px;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.projects-nav {
+  display: flex;
+  gap: 80px;
+  font-size: clamp(1.7rem, 1.4vw + 1rem, 2.4rem);
+  font-family: "Architects Daughter", cursive;
+}
+
+.projects-nav a {
+  color: #1f1b1b;
+  text-decoration: none;
+  padding-bottom: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.projects-nav a:hover {
+  color: #d35555;
+}
+
+.projects-nav a.active {
+  border-bottom: 3px solid #d35555;
+  color: #d35555;
+}
+
+.about-nav,
+.about-nav a,
+.aboutme-nav,
+.aboutme-nav a,
+.projects-nav,
+.projects-nav a,
+.contact-nav,
+.contact-nav a {
+  font-family: "Architects Daughter", cursive;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "can key circle"
+    "can bottle circle"
+    "match bottle face";
+  column-gap: clamp(32px, 5vw, 70px);
+  row-gap: clamp(48px, 7vw, 96px);
+  justify-items: center;
+  align-items: start;
+}
+
+.project-card {
+  background: var(--canvas-inner);
+  border-radius: 26px;
+  padding: 18px;
+  box-shadow: 0 18px 32px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.project-card button {
+  width: 100%;
+  height: 100%;
+}
+
+.project-trigger {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 18px;
+  display: block;
+}
+
+.project-trigger:focus-visible {
+  outline: 3px solid #d35555;
+  outline-offset: 4px;
+}
+
+.project-card.tall {
+  aspect-ratio: 3 / 4;
+}
+
+.project-card.wide {
+  aspect-ratio: 4 / 3;
+}
+
+.project-card:not(.tall):not(.wide) {
+  aspect-ratio: 1 / 1;
+}
+
+.project-can { grid-area: can; }
+.project-key { grid-area: key; }
+.project-circle { grid-area: circle; }
+.project-match { grid-area: match; }
+.project-bottle { grid-area: bottle; }
+.project-face { grid-area: face; }
+
+@media (max-width: 900px) {
+  .projects-page {
+    padding: 40px 24px 60px;
+  }
+
+  .projects-nav {
+    gap: 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    column-gap: 32px;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: minmax(220px, 1fr);
+    grid-template-areas:
+      "can"
+      "key"
+      "circle"
+      "match"
+      "bottle"
+      "face";
+  }
+}
+
+/*contact-page*/
+.contact-page {
+  background: var(--canvas-inner);
+  min-height: 100vh;
+  font-family: "Gochi Hand", sans-serif;
+  padding: 48px 32px 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-wrap {
+  width: 100%;
+  max-width: 960px;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.contact-nav {
+  display: flex;
+  gap: clamp(34px, 6vw, 100px);
+  font-size: clamp(1.6rem, 1.2vw + 1.1rem, 2.4rem);
+}
+
+.contact-nav a {
+  color: #1f1b1b;
+  text-decoration: none;
+  padding-bottom: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-nav a:hover {
+  color: #d35555;
+}
+
+.contact-nav a.active {
+  border-bottom: 3px solid #d35555;
+  color: #d35555;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  text-align: center;
+}
+
+.contact-portrait {
+  background: var(--canvas);
+  width: clamp(180px, 26vw, 230px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 14px 28px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(14px, 3vw, 22px);
+}
+
+.contact-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.contact-details {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 1.2rem;
+  color: #231a15;
+  line-height: 1.6;
+}
+
+.contact-details a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-details a:hover,
+.contact-details a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .contact-page {
+    padding: 40px 22px 60px;
+  }
+  .contact-nav {
+    gap: 28px;
+  }
+  .contact-details {
+    font-size: 1.1rem;
+  }
+}
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-toggle {
+  display: none;
+}
+
+.modal-toggle:checked + .project-modal {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.project-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.project-modal__content {
+  position: relative;
+  background: var(--canvas-inner);
+  border-radius: 36px;
+  max-width: 540px;
+  width: min(86vw, 540px);
+  padding: clamp(14px, 2.6vw, 28px);
+  box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.project-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #231a15;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.project-modal__image {
+  width: 100%;
+  max-height: calc(90vh - 160px);
+  border-radius: 22px;
+  object-fit: contain;
+  background: #fffef5;
+  margin-bottom: 12px;
+}
+
+.project-modal__body h2 {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+  color: #231a15;
+  text-align: left;
+  width: 100%;
+}
+
+.project-modal__body p {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 1.15rem;
+  color: #231a15;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.project-modal__body {
+  width: 100%;
+}
+
+.modal-toggle:checked + .project-modal .project-modal__backdrop {
+  opacity: 1;
+}
+
+.modal-toggle:checked + .project-modal .project-modal__content {
+  opacity: 1;
+  transform: translateY(0);
+}
